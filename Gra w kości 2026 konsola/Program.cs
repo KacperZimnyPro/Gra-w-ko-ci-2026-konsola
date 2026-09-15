@@ -61,28 +61,26 @@
 
 class Program
 {
+
     static void Main()
     {
         Console.WriteLine("Podaj liczbę oczek dla kostki: ");
         kosc Kosc1 = new kosc(Convert.ToInt32(Console.ReadLine()));
         Console.WriteLine("KOŚĆ 1:");
+        Console.WriteLine("Liczba instancji: " + kosc.liczbaInstancji);
         Console.WriteLine("Liczba oczek: " + Kosc1.LiczbaOczek);
-        Console.WriteLine("Index: " + Kosc1.index);
-        Console.WriteLine("Dostępna: " + Kosc1.dostepna);
-        Console.WriteLine("Nazwa pliku: " + Kosc1.nazwyplikow[Kosc1.index]);
         Console.WriteLine("Wartość tekstowo: " + Kosc1.PobierzWartoscTekstowo());
-
+        Console.WriteLine("Nazwa pliku: " + Kosc1.nazwyplikow[Kosc1.index]);
+        //Console.WriteLine("Nazwa pliku: " + Kosc1.nazwyplikow[Kosc1.index]);
         Console.WriteLine();
 
         kosc Kosc2 = new kosc();
         Console.WriteLine("KOŚĆ 2:");
+        Console.WriteLine("Liczba instancji: " + kosc.liczbaInstancji);
         Console.WriteLine("Liczba oczek: " + Kosc2.LiczbaOczek);
-        Console.WriteLine("Index: " + Kosc2.index);
-        Console.WriteLine("Dostępna: " + Kosc2.dostepna);
-        Console.WriteLine("Nazwa pliku: " + Kosc2.nazwyplikow[Kosc2.index]);
         Console.WriteLine("Wartość tekstowo: " + Kosc2.PobierzWartoscTekstowo());
+        Console.WriteLine("Nazwa pliku: " + Kosc2.nazwyplikow[Kosc2.index]);
 
         Console.WriteLine();
-        Console.WriteLine("Liczba instancji: " + kosc.liczbaInstancji);
     }
 }
